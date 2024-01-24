@@ -65,6 +65,12 @@ add_subdirectory(SDL EXCLUDE_FROM_ALL)
 # Link SDL to our executable. This also makes its include directory available to us. 
 target_link_libraries(${EXECUTABLE_NAME} PUBLIC SDL3::SDL3)
 
+# Add the ImGui submodule
+add_subdirectory(imgui)
+
+# Link ImGui to your executable or library
+target_link_libraries(${EXECUTABLE_NAME} PUBLIC imgui)
+
 # set some extra configs for each platform
 set_target_properties(${EXECUTABLE_NAME} PROPERTIES 
     # On macOS, make a proper .app bundle instead of a bare executable

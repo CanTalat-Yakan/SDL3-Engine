@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <AppxManifest Include="D:\SDL3DEngine\src\Sample.appxManifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\SDL3DEngine\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Core.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\SceneSystem\SceneManager.cpp">
+      <Filter>Source Files\Core\SceneSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Loader\ImageLoader.cpp">
+      <Filter>Source Files\Core\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Loader\ModelLoader.cpp">
+      <Filter>Source Files\Core\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Utilities\Input.cpp">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Utilities\Output.cpp">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Utilities\Profiler.cpp">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Utilities\Time.cpp">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Renderer\Material.cpp">
+      <Filter>Source Files\Core\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Renderer\Renderer.cpp">
+      <Filter>Source Files\Core\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Renderer\Scene.cpp">
+      <Filter>Source Files\Core\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="imguimain.cpp">
+      <Filter>Source Files\Core\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>Source Files\Core\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_internal.h">
+      <Filter>Source Files\Core\GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SDL3DEngine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\SDL3DEngine\src\iosLaunchScreen.storyboard">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{68C76123-352D-3048-A4C4-8940C7792D36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C277DC2C-7AC2-3C1E-B13E-F6DD0249BFD4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{6e95562f-a9cd-4eaa-9641-9b61180d94a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Utilities">
+      <UniqueIdentifier>{bbfc9ea6-b4cb-4715-adda-fd0ccc0f4a2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\SceneSystem">
+      <UniqueIdentifier>{383cff93-a1c4-4e03-a5e2-e1fd9a9e417f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Components">
+      <UniqueIdentifier>{6f4a3b96-7340-47b1-a2f9-a0a1f7beab93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Renderer">
+      <UniqueIdentifier>{e78d45cf-6f68-4186-b584-737ccb7c0e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Helper">
+      <UniqueIdentifier>{9648c8db-a70c-44c1-8502-7f22fd575e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Resources">
+      <UniqueIdentifier>{523730d8-421b-4d3c-96aa-5756e4dfc7a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Loader">
+      <UniqueIdentifier>{3bea6a1e-a9c6-4ce1-afb9-64e02bf686a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Data">
+      <UniqueIdentifier>{da73fd90-382d-4fec-a846-d7f02c521f23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\GUI">
+      <UniqueIdentifier>{f548088c-9228-4bbf-9855-6e2be87c4403}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\engine\Core.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\SceneSystem\Entity.h">
+      <Filter>Source Files\Core\SceneSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\SceneSystem\Scene.h">
+      <Filter>Source Files\Core\SceneSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\SceneSystem\SceneManager.h">
+      <Filter>Source Files\Core\SceneSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Loader\ImageLoader.h">
+      <Filter>Source Files\Core\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Loader\ModelLoader.h">
+      <Filter>Source Files\Core\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Utilities\Input.h">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Utilities\Output.h">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Utilities\Profiler.h">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Utilities\Time.h">
+      <Filter>Source Files\Core\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Renderer\Material.h">
+      <Filter>Source Files\Core\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Renderer\Renderer.h">
+      <Filter>Source Files\Core\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui.h" />
+  </ItemGroup>
+</Project>
