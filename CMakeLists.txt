@@ -57,6 +57,11 @@ if(WINDOWS_STORE)
     target_compile_options(${EXECUTABLE_NAME} PUBLIC "/ZW" "/EHsc")
 endif()
 
+
+
+
+# -------------- CMakeLists.txt for SDL submodule
+#
 # Configure SDL by calling its CMake file.
 # we use EXCLUDE_FROM_ALL so that its install targets and configs don't
 # pollute upwards into our configuration.
@@ -64,12 +69,57 @@ add_subdirectory(SDL EXCLUDE_FROM_ALL)
 
 # Link SDL to our executable. This also makes its include directory available to us. 
 target_link_libraries(${EXECUTABLE_NAME} PUBLIC SDL3::SDL3)
+# ----------------------------------------------------------------------
 
-# Add the ImGui submodule
-add_subdirectory(imgui)
+
+
+
+# -------------- CMakeLists.txt for ImGui submodule
+# 
+# Gather source files for ImGui library
+set(IMGUI_SOURCE_FILES
+    imgui/imgui.h
+    imgui/imgui.cpp
+    imgui/imconfig.h
+    imgui/imgui_demo.cpp
+    imgui/imgui_draw.cpp
+    imgui/imgui_internal.h
+    imgui/imstb_rectpack.h
+    imgui/imstb_textedit.h
+    imgui/imstb_truetype.h
+    imgui/imgui_tables.cpp
+    imgui/imgui_widgets.cpp
+	
+	# Add other ImGui source files if needed
+    
+	# Specific bindings for SDL
+    imgui/backends/imgui_impl_sdl3.h
+    imgui/backends/imgui_impl_sdl3.cpp
+    imgui/backends/imgui_impl_sdlrenderer3.h
+    imgui/backends/imgui_impl_sdlrenderer3.cpp
+    imgui/backends/imgui_impl_opengl3.h
+    imgui/backends/imgui_impl_opengl3.cpp
+)
+
+# Define the ImGui library target
+add_library("imgui" STATIC ${IMGUI_SOURCE_FILES})
+
+# Include directories for ImGui headers and the 'backends' directory
+target_include_directories("imgui" PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/imgui)
+target_include_directories("imgui" PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/imgui/backends)
+
+# Link SDL to the ImGui library target
+target_link_libraries("imgui" PRIVATE SDL3::SDL3)
+
+# Set C++ standard for ImGui
+target_compile_features(imgui PUBLIC cxx_std_11)
 
 # Link ImGui to your executable or library
 target_link_libraries(${EXECUTABLE_NAME} PUBLIC imgui)
+# ----------------------------------------------------------------------
+
+
+
 
 # set some extra configs for each platform
 set_target_properties(${EXECUTABLE_NAME} PROPERTIES 
