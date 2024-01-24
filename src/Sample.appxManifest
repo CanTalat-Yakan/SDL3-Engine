@@ -4,11 +4,11 @@
 	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
 	IgnorableNamespaces="uap mp">
 
-	<Identity Name="39530109-D481-30A9-800E-D880CAA4D892" Publisher="CN=Ravbug" Version="1.0.0.0" />
+	<Identity Name="39530109-D481-30A9-800E-D880CAA4D892" Publisher="CN=3DEngine" Version="1.0.0.0" />
 	<mp:PhoneIdentity PhoneProductId="39530109-D481-30A9-800E-D880CAA4D892" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 	<Properties>
-		<DisplayName>sdl-min</DisplayName>
-		<PublisherDisplayName>Ravbug</PublisherDisplayName>
+		<DisplayName>SDL3DEngine</DisplayName>
+		<PublisherDisplayName>3DEngine</PublisherDisplayName>
 		<Logo>logo50.png</Logo>
 	</Properties>
 	<Dependencies>
@@ -18,10 +18,10 @@
 		<Resource Language="en-us" />
 	</Resources>
 	<Applications>
-		<Application Id="App" Executable="sdl-min.exe" EntryPoint="sdl-min.App">
+		<Application Id="App" Executable="SDL3DEngine.exe" EntryPoint="SDL3DEngine.App">
 			<uap:VisualElements
-				DisplayName="sdlmin"
-				Description="sdlmin UWP Build"
+				DisplayName="SDL3DEngine"
+				Description="SDL3DEngine UWP Build"
 				BackgroundColor="#222222"
 				Square150x150Logo="logo150.png"
 				Square44x44Logo="logo44.png">
